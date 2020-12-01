@@ -1,11 +1,16 @@
 <html>
     <body>
         <h1>Hello!</h1>
+        <button id="dec">Decrease</button>
         <label id="count">0</label>
         <button id="inc">Increase</button>
         <script>
             document.querySelector('#inc').addEventListener('click', () => {
                 document.querySelector('#count').innerText = parseInt(document.querySelector('#count').innerText) + 1
+            })
+            
+            document.querySelector('#dec').addEventListener('click', () => {
+                document.querySelector('#count').innerText = parseInt(document.querySelector('#count').innerText) - 1
             })
         </script>
     
