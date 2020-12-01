@@ -1,9 +1,12 @@
 <html>
     <body>
         <h1>Hello!</h1>
-        <button id="hello">alert Hello!</button>
+        <input id="input">
+        <button id="alert">alert</button>
         <script>
-            document.querySelector('#hello').addEventListener('click', () => alert('Hello!'))
+            document.querySelector('#alert').addEventListener('click', () => {
+                alert(document.querySelector('#input').value)
+            })
         </script>
     </body>
 </html>
