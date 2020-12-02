@@ -1,22 +1,12 @@
 <html>
     <body>
         <h1>Hello!</h1>
-        <button id="dec">Decrease</button>
-        <label id="count">0</label>
-        <button id="inc">Increase</button>
-        <button id="double">Double</button>
+        <input id="a"> + <input id="b"> <button id="calc">=</button> <label id="res">0</label>
         <script>
-            document.querySelector('#inc').addEventListener('click', () => {
-                document.querySelector('#count').innerText = parseInt(document.querySelector('#count').innerText) + 1
-            })
-            
-            document.querySelector('#dec').addEventListener('click', () => {
-                document.querySelector('#count').innerText = parseInt(document.querySelector('#count').innerText) - 1
-            })
-            
-            document.querySelector('#dec').addEventListener('click', () => {
-                document.querySelector('#count').innerText = parseInt(document.querySelector('#count').innerText) * 2
+            document.querySelector('#calc').addEventListener('click', () => {
+                document.querySelector('#res').innerText = parseInt(document.querySelector('#a').value) + parseInt(document.querySelector('#b').value)
             })
         </script>
     </body>
 </html>
+
