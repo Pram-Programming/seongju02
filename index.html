@@ -6,9 +6,14 @@
             const canvas = document.querySelector('#canvas')
             const ctx = canvas.getContext('2d')
             
-            for (let i = 0; i < 10; i++) {
-                ctx.fillRect(0, i * 50, 20, 20)
+            CanvasRenderingContext2D.prototype.fillCircle = function (x, y, r) {
+                ctx.beginPath()
+                ctx.arc(x, y, r, 0, 2 * Math.PI)
+                ctx.fill()
+                ctx.closePath()
             }
+            
+            ctx.fillCircle(250, 250, 50)
         </script>
     </body>
 </html>
