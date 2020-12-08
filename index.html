@@ -13,12 +13,18 @@
                 ctx.closePath()
             }
             
-            let x = 100
+            let x = 250, y = 250
+            
             setInterval(() => {
-                ctx.fillCircle(x, 100, 20)
-                x += 1
-            }, 20)
+                ctx.fillCircle(x, y, 20)
+            }, 10)
+            
+            canvas.addEventListener('keydown', evt => {
+                if (evt.keyCode === 87) y -= 10 // w
+                if (evt.keyCode === 65) x -= 10 // a
+                if (evt.keyCode === 83) y += 10 // s
+                if (evt.keyCode === 68) x += 10 // d
+            })
         </script>
     </body>
 </html>
-
